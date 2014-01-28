@@ -1,0 +1,145 @@
+@import url('reset.css');
+
+/* General */
+
+html {
+  height: 100%
+}
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  position:relative;
+}
+p, cite, li, a {
+  font-family:'Arial', Helvetica, sans-serif;
+}
+
+/* Utils */
+
+.transparency {
+  zoom: 1;
+  filter: alpha(opacity=70);
+  opacity: 0.7;
+}
+.bold {
+  font-weight:bold;
+}
+
+/* Map */
+
+#map-canvas {
+  height: 100%;
+  z-index:5;
+}
+
+/* App */
+
+#user-input-form {
+  width:300px;
+  height:190px;
+  background:url('../img/mask-bg.png');
+  position:absolute;
+  z-index:10;
+  left:10px;
+  top:10px;
+  display:none;
+}
+#user-input-form.error input {
+  border:1px solid #FF0000;
+  color:#FF0000;
+}
+#user-input-form p,
+#user-input-form cite,
+.route-info p,
+.route-info cite,
+.search-history p {
+  color:#FFF;
+  padding:10px;
+  line-height:22px;
+}
+#user-input-form cite,
+.route-info cite,
+.search-history cite {
+  font-style:italic;
+  font-size:12px;
+}
+#user-input-form input {
+  border:none;
+  height: 30px;
+  text-indent: 10px;
+  width: 93%;
+  margin:10px 0 10px 10px;
+  border:1px solid #FFF;
+}
+#user-input-form .submit-address,
+#user-input-form .clear-map,
+#user-input-form .clear-history {
+  background:none;
+  border:none;
+  color:#FFF;
+  background:#000;
+  cursor: pointer;
+  padding:4px 10px;
+  position:absolute;
+  bottom:10px;
+  right:10px;
+}
+#user-input-form .submit-address:hover,
+#user-input-form .clear-map:hover,
+#user-input-form .clear-history:hover {
+  background:#333;
+}
+#user-input-form .clear-map {
+  right:90px;
+}
+#user-input-form .clear-history {
+  right:179px;
+}
+.route-info,
+.search-history {
+  width:300px;
+  background:url('../img/mask-bg.png');
+  position:absolute;
+  z-index:10;
+  left:10px;
+  top:210px;
+  display:none;
+}
+.search-history {
+  display:block;
+  top:263px;
+}
+.search-history li {
+  border-bottom:1px solid #333;
+  position:relative;
+}
+.search-history li button {
+  position:absolute;
+  right:10px;
+  top:10px;
+  color:#FFF;
+  font-weight:bold;
+  background:url('../img/mask-bg.png');
+  border:none;
+  cursor:pointer;
+}
+.search-history li button:hover {
+  background:#000;
+}
+.search-history li.last {
+  border:none;
+}
+.search-history li a {
+  color:#FFF;
+  cursor:pointer;
+  padding:10px 40px 10px 10px;
+  display:block;
+  line-height:22px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.search-history li a:hover {
+  background:url('../img/mask-bg.png');
+}

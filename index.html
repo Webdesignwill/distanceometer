@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
+    <title>Distance-o-meter</title>
+    <link href="/css/main.css" rel="stylesheet" />
+    <script src="/js/jquery.js" type="text/javascript"></script>
+    <script src="/js/main.js" type="text/javascript"></script>
+  </head>
+  <body>
+    <form id="user-input-form">
+      <p>Search an address and find out the distance in km from your location</p>
+      <input type="text" class="distance-to" placeholder="Distance to here" />
+      <cite>Accurate up to <span id="geo-accuracy"></span> meters</cite>
+      <button class="submit-address">Measure</button>
+      <button class="clear-map">Clear Map</button>
+      <button class="clear-history">Clear History</button>
+    </form>
+    <section class="route-info">
+      <p>Target distance is <span id="distance-in-km" class="bold"></span> kilometers</p>
+    </section>
+    <section class="search-history">
+      <p id="search-history-text">Search History <cite id="search-history-status"></cite></p>
+      <ul id="search-history-list"></ul>
+    </section>
+    <div id="map-canvas"/>
+
+  </body>
+</html>
